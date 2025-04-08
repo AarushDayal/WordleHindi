@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हिंदी वर्डल</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="hindi-wordle-app" class="app-container">
+        <h1 class="app-title">हिंदी वर्डल</h1>
+        
+        <!-- Start Screen -->
+        <div id="start-screen" class="start-screen">
+            <div class="menu-container">
+                <h2 class="menu-title">कठिनाई स्तर चुनें</h2>
+                <div class="difficulty-buttons">
+                    <button id="easy-btn" class="difficulty-btn easy">आसान</button>
+                    <button id="medium-btn" class="difficulty-btn medium">मध्यम</button>
+                    <button id="hard-btn" class="difficulty-btn hard">कठिन</button>
+                </div>
+                <div class="rules-container">
+                    <h3 class="rules-title">नियम:</h3>
+                    <ul class="rules-list">
+                        <li>हर बार एक हिंदी शब्द का अनुमान लगाएँ</li>
+                        <li>गहरा बैंगनी वर्ण सही स्थान पर है</li>
+                        <li>हल्का बैंगनी वर्ण शब्द में है लेकिन गलत स्थान पर है</li>
+                        <li>ग्रे वर्ण शब्द में नहीं है</li>
+                        <li>आपके पास 6 प्रयास हैं</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Game Screen -->
+        <div id="game-screen" class="game-screen hidden">
+            <!-- Game Info -->
+            <div class="game-info">
+                <div id="difficulty-display" class="difficulty-display">कठिनाई: </div>
+                <div id="attempts-display" class="attempts-display">प्रयास: 0/6</div>
+            </div>
+            
+            <!-- Message Display -->
+            <div id="message-display" class="message-display hidden"></div>
+            
+            <!-- Game Board -->
+            <div id="game-board" class="game-board"></div>
+            
+            <!-- Virtual Keyboard -->
+            <div id="virtual-keyboard" class="virtual-keyboard"></div>
+            
+            <!-- Game Controls -->
+            <div id="game-controls" class="game-controls hidden">
+                <button id="play-again-btn" class="control-btn play-again">फिर खेलें</button>
+                <button id="main-menu-btn" class="control-btn main-menu">मुख्य मेनू</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #faf5ff; /* bg-purple-50 */
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.app-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #5b21b6; /* text-purple-800 */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Start Screen Styles */
+.start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-container {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d8b4fe; /* border-purple-300 */
+    max-width: 500px;
+}
+
+.menu-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #5b21b6; /* text-purple-800 */
+    text-align: center;
+}
+
+.difficulty-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.difficulty-btn {
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.difficulty-btn.easy {
+    background-color: #a855f7; /* bg-purple-500 */
+}
+
+.difficulty-btn.easy:hover {
+    background-color: #9333ea; /* bg-purple-600 */
+}
+
+.difficulty-btn.medium {
+    background-color: #9333ea; /* bg-purple-600 */
+}
+
+.difficulty-btn.medium:hover {
+    background-color: #7e22ce; /* bg-purple-700 */
+}
+
+.difficulty-btn.hard {
+    background-color: #6b21a8; /* bg-purple-800 */
+}
+
+.difficulty-btn.hard:hover {
+    background-color: #581c87; /* bg-purple-900 */
+}
+
+.rules-container {
+    color: #5b21b6; /* text-purple-800 */
+}
+
+.rules-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.rules-list {
+    list-style-position: inside;
+    padding-left: 1.25rem;
+}
+
+/* Game Screen Styles */
+.game-screen {
+    max-width: 28rem;
+    width: 100%;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: #5b21b6; /* text-purple-800 */
+    font-size: 1.125rem;
+}
+
+.message-display {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-radius: 0.25rem;
+    background-color: #f3e8ff; /* bg-purple-100 */
+    color: #5b21b6; /* text-purple-800 */
+}
+
+.message-display.error {
+    background-color: #fee2e2; /* bg-red-100 */
+    color: #991b1b; /* text-red-800 */
+}
+
+.message-display.success {
+    background-color: #f3e8ff; /* bg-purple-100 */
+    color: #5b21b6; /* text-purple-800 */
+}
+
+.game-board {
+    display: grid;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.guess-row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.letter-cell {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+}
+
+.letter-cell.empty {
+    border: 2px solid #e9d5ff; /* border-purple-200 */
+}
+
+.letter-cell.current {
+    border: 2px solid #a855f7; /* border-purple-500 */
+}
+
+.letter-cell.correct {
+    background-color: #7e22ce; /* bg-purple-700 */
+    color: white;
+    border: none;
+}
+
+.letter-cell.present {
+    background-color: #c084fc; /* bg-purple-400 */
+    color: white;
+    border: none;
+}
+
+.letter-cell.absent {
+    background-color: #6b7280; /* bg-gray-500 */
+    color: white;
+    border: none;
+}
+
+.virtual-keyboard {
+    margin-bottom: 1rem;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.key-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background-color: #e9d5ff; /* bg-purple-200 */
+    color: #5b21b6; /* text-purple-800 */
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.3s;
+}
+
+.key-btn:hover {
+    opacity: 0.8;
+}
+
+.key-btn.char {
+    width: 2rem;
+    height: 2.5rem;
+}
+
+.key-btn.wide {
+    padding: 0 0.75rem;
+    height: 2.5rem;
+}
+
+.key-btn.correct {
+    background-color: #7e22ce; /* bg-purple-700 */
+    color: white;
+}
+
+.key-btn.present {
+    background-color: #c084fc; /* bg-purple-400 */
+    color: white;
+}
+
+.key-btn.absent {
+    background-color: #6b7280; /* bg-gray-500 */
+    color: white;
+}
+
+.game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.control-btn {
+    padding: 0.5rem 1.5rem;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.control-btn.play-again {
+    background-color: #9333ea; /* bg-purple-600 */
+}
+
+.control-btn.play-again:hover {
+    background-color: #7e22ce; /* bg-purple-700 */
+}
+
+.control-btn.main-menu {
+    background-color: #c084fc; /* bg-purple-400 */
+}
+
+.control-btn.main-menu:hover {
+    background-color: #a855f7; /* bg-purple-500 */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .letter-cell {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+    
+    .key-btn.char {
+        width: 1.75rem;
+        height: 2.25rem;
+        font-size: 0.75rem;
+    }
+    
+    .key-btn.wide {
+        padding: 0 0.5rem;
+        height: 2.25rem;
+        font-size: 0.75rem;
+    }
+    
+    .difficulty-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
